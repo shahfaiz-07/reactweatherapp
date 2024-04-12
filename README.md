@@ -1,8 +1,18 @@
-# React + Vite
+# React Weather App - WeatherMe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple weather application built using React.js and the Context API for state management. It makes the use of OpenWeather API to provide real time weather data for every 3 hour and for next 3 days
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add your city name to display weather data of the day and of the next 3 days
+
+## Technologies Used
+
+- ReactJS
+- TailwindCSS
+- Context API
+- OpenWeather [API](https://openweathermap.org/)
+
+## Contributions
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
