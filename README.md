@@ -13,6 +13,7 @@ This is a simple weather application built using React.js and the Context API fo
 - Context API
 - OpenWeather [API](https://openweathermap.org/)
 - Vercel for Deployment
+- ChartJS
 
 ## Contributions
 
