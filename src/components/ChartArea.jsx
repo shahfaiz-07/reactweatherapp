@@ -34,6 +34,7 @@ const ChartArea = ({tempToday}) => {
                 labels: {
                     font: {
                         size: 10,
+                        family: "monospace",
                     },
                 },
             },
@@ -41,6 +42,9 @@ const ChartArea = ({tempToday}) => {
                 display: true,
                 text: `${currentCity}'s Temperature Every 3 Hour`,
                 position: "top",
+                font: {
+                    family: "monospace",
+                },
             },
             filler: {
                 propogate: true,

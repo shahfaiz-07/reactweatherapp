@@ -34,6 +34,7 @@ const PressureArea = ({ pressureToday }) => {
                 labels: {
                     font: {
                         size: 10,
+                        family: "monospace",
                     },
                 },
             },
@@ -41,6 +42,9 @@ const PressureArea = ({ pressureToday }) => {
                 display: true,
                 text: pressureToday.text,
                 position: "top",
+                font: {
+                    family: "monospace",
+                },
             },
             filler: {
                 propogate: true,
