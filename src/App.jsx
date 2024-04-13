@@ -3,7 +3,7 @@ import { WeatherContextProvider } from "./context/weatherContext";
 import { useEffect, useState } from "react";
 
 function App() {
-    const [currentCity, setCurrentCity] = useState("Jamshedpur");
+    const [currentCity, setCurrentCity] = useState("London");
     const [fetched, setFetched] = useState(false);
     const [apiData, setApiData] = useState({
         list: [
@@ -82,6 +82,8 @@ function App() {
                     cc: result.city.country
                 });
                 setPressureToday((prev) => ({
+                    ...prev,
+                    text: `${currentCity}'s Pressure Every 3 Hours`,
                     labels: [
                         new Date(result.list[0].dt_txt).toLocaleString(
                             "en-IN",
@@ -212,6 +214,8 @@ function App() {
             });
             setApiData(result);
             setPressureToday((prev) => ({
+                ...prev,
+                text: `${currentCity}'s Pressure Every 3 Hours`,
                 labels: [
                     new Date(result.list[0].dt_txt).toLocaleString(
                         "en-IN",
