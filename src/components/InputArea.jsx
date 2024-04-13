@@ -4,6 +4,11 @@ import { useData } from '../context/weatherContext'
 const InputArea = () => {
     const { fetchData, currentCity, setCurrentCity } = useData()
     const [city, setCity] = useState(currentCity);
+    String.prototype.toProperCase = function () {
+        return this.replace(/\w\S*/g, function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
+        });
+    };
   return (
       <div className="p-3 flex flex-col w-full">
           <label htmlFor="city">
@@ -13,7 +18,7 @@ const InputArea = () => {
                   id="city"
                   className="px-2 py-1 w-full text-sm border rounded-md"
                   value={city}
-                  onChange={(e) => setCity(e.target.value)}
+                  onChange={(e) => setCity(e.target.value.toProperCase())}
               />
           </label>
           <button
@@ -26,7 +31,7 @@ const InputArea = () => {
                   }
               }}
           >
-              Get Weather
+              Get Weather Data
           </button>
       </div>
   );

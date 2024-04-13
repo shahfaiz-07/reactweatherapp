@@ -45,7 +45,10 @@ const LeftCard = () => {
       <div
           className={`bg-slate-100 md:bg-white whitespace-nowrap p-10 font-mono rounded`}
       >
-          <p className="text-sm text-gray-500 mb-2 font-semibold">{dateTime}</p>
+          <p className="text-sm text-gray-500 font-semibold">{dateTime}</p>
+          <p className="text-gray-600 text-sm text-center">
+              (country : {today.cc})
+          </p>
           <p className="leading-none text-center text-sm font-bold">
               {currentCity}'s Current Weather
           </p>

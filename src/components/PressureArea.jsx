@@ -39,7 +39,7 @@ const PressureArea = ({ pressureToday }) => {
             },
             title: {
                 display: true,
-                text: `${currentCity}'s Pressure Every 3 Hour`,
+                text: pressureToday.text,
                 position: "top",
             },
             filler: {
@@ -79,16 +79,24 @@ const PressureArea = ({ pressureToday }) => {
         labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         datasets: [
             {
-                label: "Hourly Pressure (mb)",
+                label: `Hourly ${pressureToday.graphFor} (${pressureToday.unit})`,
                 data: [0, 3, 2, 3, 2],
-                borderColor: "rgb(27,153,139)",
+                borderColor: `${
+                    pressureToday.color
+                        ? "rgb(" + pressureToday["color"] + ")"
+                        : "rgb(27,153,139)"
+                }`,
                 fill: true,
-                backgroundColor: "rgba(27,153,139,0.3)",
+                backgroundColor: `${
+                    pressureToday.color
+                        ? "rgba(" + pressureToday["color"] + ",0.3)"
+                        : "rgba(27,153,139,0.3)"
+                }`,
                 borderWidth: 1,
                 pointStyle: "cirle",
                 pointRadius: 5,
                 pointHoverRadius: 7,
-            }
+            },
         ],
     });
     useEffect(() => {

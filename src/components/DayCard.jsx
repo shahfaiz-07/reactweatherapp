@@ -29,14 +29,16 @@ const DayCard = ({ data }) => {
             iconString = "fa-solid fa-cloud-showers-heavy";
     }
     return (
-        <div>
-            <div className={`bg-slate-100 px-8 py-5 font-mono rounded`}>
+        <div className="w-fit">
+            <div className={`bg-slate-100 px-8 py-5 font-mono rounded min-w-60`}>
                 <p
                     className={`text-sm text-gray-500 mb-2 font-semibold text-center`}
                 >
                     {data.date.toLocaleString("en-US", {
                         month: "short",
                         day: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit"
                     })}
                 </p>
                 <div className="flex justify-between gap-5 items-center py-4">
@@ -55,9 +57,7 @@ const DayCard = ({ data }) => {
                         >
                             Weather
                         </h4>
-                        <p className="font-semibold text-sm">
-                            {data.weather}
-                        </p>
+                        <p className="font-semibold text-sm">{data.weather}</p>
                     </div>
                 </div>
                 <div className="mt-3 text-center flex justify-between">
@@ -79,6 +79,28 @@ const DayCard = ({ data }) => {
                         </h4>
                         <p className="font-semibold text-sm">
                             {data.windspeed} m/sec
+                        </p>
+                    </div>
+                </div>
+                <div className="mt-3 text-center flex justify-between">
+                    <div>
+                        <h4
+                            className={`text-xs font-semibold text-gray-500 mb-1`}
+                        >
+                            Feels Like
+                        </h4>
+                        <p className="font-semibold text-sm">
+                            {data.feels_like} °C
+                        </p>
+                    </div>
+                    <div>
+                        <h4
+                            className={`text-xs font-semibold text-gray-500 mb-1`}
+                        >
+                            Pressure
+                        </h4>
+                        <p className="font-semibold text-sm">
+                            {data.pressure} mb
                         </p>
                     </div>
                 </div>

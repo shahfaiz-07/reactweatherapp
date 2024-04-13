@@ -3,7 +3,9 @@ import { createContext, useContext } from "react";
 export const WeatherContext = createContext({
     today: {},
     tempToday: {},
+    apiData: {},
     currentCity: "",
+    setApiData: () => {},
     fetchData: (city) => { },
     setTempToday: () => { },
     setCurrentCity: (city) => { }
