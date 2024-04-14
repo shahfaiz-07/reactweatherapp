@@ -68,4 +68,4 @@ http://localhost:5173
 
 ## Deployment
 
-The application is deployed on [Vercel](https://vercel.com/). You can access the live version [here](https://reactweatherapp-amber.vercel.app/).
+The application is deployed on [Vercel](https://vercel.com/). You can access the live version [here](https://weatherme-omega.vercel.app/).
